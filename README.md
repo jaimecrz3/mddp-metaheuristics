@@ -4,29 +4,30 @@ This repository contains a C++ implementation of several trajectory-based metahe
 
 ## Problem statement
 
-Given:
-- a set of `n` elements (`n > m`),
-- a target subset size `m`,
-- and a distance matrix `D = (d_ij)` of size `n × n`,
 
-the goal is to select a subset `S` of `m` elements minimizing the **differential dispersion**.
+Given:
+- a set of $`n`$ elements ($`n > m`$),
+- a target subset size $`m`$,
+- and a distance matrix $`D = (d_{ij})`$ of size $`n × n`$,
+
+the goal is to select a subset $`S`$ of $`m`$ elements minimizing the **differential dispersion**.
 
 ### Definitions
 
-For each selected element `v ∈ S`, define:
+For each selected element $`v ∈ S`$, define:
 
 - **Delta value**
-  - `Δ(v) = Σ_{u ∈ S} d_uv`
+  - $`Δ(v) = Σ_{u ∈ S} d_{uv}`$
 
-The dispersion of a solution `S` is:
+The dispersion of a solution $`S`$ is:
 
 - **Differential dispersion**
-  - `diff(S) = max_{v ∈ S} Δ(v) − min_{v ∈ S} Δ(v)`
+  - $`diff(S) = max_{v ∈ S} Δ(v) − min_{v ∈ S} Δ(v)`$
 
 Objective:
 
 - **Minimize**
-  - `min diff(S)` subject to `S ⊆ V` and `|S| = m`
+  - min diff(S) subject to $`S ⊆ V`$ and $`|S| = m`$
 
 
 ---
